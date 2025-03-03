@@ -1,35 +1,53 @@
 import React from "react";
-import { Container, Grid, Typography, Link, Box, IconButton } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Typography,
+  Link,
+  Box,
+  IconButton,
+} from "@mui/material";
 import { Facebook, Twitter, Instagram, YouTube } from "@mui/icons-material";
 
 const Footer = () => {
   return (
-    <Box component="footer" sx={{
-      bgcolor: (color) => color.palette.primary.main, color: "white", py: 4
-    }}>
+    <Box
+      component="footer"
+      sx={{
+        bgcolor: (color) => color.palette.primary.main,
+        color: "white",
+        py: 4,
+      }}
+    >
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {/* About Section */}
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>
-              About Us
-            </Typography>
+            <img alt="Logo" width="180px" src="/assets/image/Logo.png" />
             <Typography variant="body2">
-              Your go-to bookstore for the best collection of books across various genres.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda consequatur maiores, laudantium facere ducimus dignissimos earum asperiores minus soluta error cumque iure quo odio voluptatibus possimus modi quia aliquid sit?
             </Typography>
           </Grid>
-          
+
           {/* Links Section */}
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" gutterBottom>
               Quick Links
             </Typography>
-            <Link href="#" color="inherit" display="block">Home</Link>
-            <Link href="#" color="inherit" display="block">Shop</Link>
-            <Link href="#" color="inherit" display="block">Contact Us</Link>
-            <Link href="#" color="inherit" display="block">Privacy Policy</Link>
+            <Link href="#" color="inherit" display="block">
+              Home
+            </Link>
+            <Link href="#" color="inherit" display="block">
+              Shop
+            </Link>
+            <Link href="#" color="inherit" display="block">
+              Contact Us
+            </Link>
+            <Link href="#" color="inherit" display="block">
+              Privacy Policy
+            </Link>
           </Grid>
-          
+
           {/* Social Media Section */}
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" gutterBottom>
@@ -49,7 +67,7 @@ const Footer = () => {
             </IconButton>
           </Grid>
         </Grid>
-        
+
         {/* Copyright */}
         <Box textAlign="center" mt={3}>
           <Typography variant="body2">
