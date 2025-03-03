@@ -1,0 +1,15 @@
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 18px !important;
+}
+.css-172h5vu-MuiButtonBase-root-MuiIconButton-root {
+  margin: 0 24px !important;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
