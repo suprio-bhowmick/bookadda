@@ -5,11 +5,12 @@
 .css-172h5vu-MuiButtonBase-root-MuiIconButton-root {
   margin: 0 24px !important;
 }
-body {
+#root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; 
+  margin: 0;
 }
-main {
+.MuiContainer-root {
   flex: 1;
 }

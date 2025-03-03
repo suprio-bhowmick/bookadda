@@ -19,7 +19,9 @@ import "react-toastify/dist/ReactToastify.css";
 function Register() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isLoading, error, isRegister } = useSelector((state) => state.auth);
+  const { isLoading, error, isRegister, isLoggedIn } = useSelector(
+    (state) => state.auth
+  );
 
   const {
     register,
@@ -30,23 +32,27 @@ function Register() {
   const onSubmit = (data) => {
     dispatch(registerUser(data));
   };
-
-  // Redirect and show toast on successful registration
   useEffect(() => {
     if (isRegister) {
       toast.success("Registration successful! Redirecting...", {
         position: "top-right",
-        autoClose: 1500, // 2 seconds delay
+        autoClose: 1500,
       });
 
       setTimeout(() => {
-        navigate("/"); // Redirect to shop page
+        navigate("/login"); 
       }, 1600);
     }
   }, [isRegister, navigate]);
 
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate("/");
+    }
+  }, [navigate, isLoggedIn]);
+
   return (
-    <Container maxWidth="xl" sx={{my:"25px"}}>
+    <Container maxWidth="xl" sx={{ my: "25px" }}>
       <Box>
         <Card>
           <CardContent sx={{ padding: 0, paddingBottom: "0px !important" }}>
@@ -59,7 +65,10 @@ function Register() {
                 />
               </Grid>
               <Grid item xs={12} md={6} sx={{ padding: "25px" }}>
-                <Typography variant="h4" sx={{ marginBottom: "15px" , fontWeight:"600"}}>
+                <Typography
+                  variant="h4"
+                  sx={{ marginBottom: "15px", fontWeight: "600" }}
+                >
                   Register Now
                 </Typography>
                 <Typography sx={{ marginBottom: "15px" }}>

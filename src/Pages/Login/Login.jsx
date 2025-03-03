@@ -36,7 +36,7 @@ function LoginPage() {
 
   const onSubmit = (data) => {
     dispatch(userLogin(data));
-  };
+  }; 
 
   // Redirect and show toast on successful login
   useEffect(() => {

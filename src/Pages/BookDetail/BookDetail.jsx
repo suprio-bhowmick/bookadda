@@ -22,7 +22,7 @@ function BookDetailPage() {
   const { bookName } = useParams();
   const dispatch = useDispatch();
   const { singleBook, isLoading } = useSelector((state) => state.books);
-  const cart = useSelector((state) => state.cart.cart); // Get cart items
+  const cart = useSelector((state) => state.cart.cart); 
   const [tabValue, setTabValue] = React.useState(0);
 
   useEffect(() => {
